@@ -30,4 +30,4 @@ for (let i = 1; i < input.length; i++) {
   } else stack.push(input[i].substring(5));
 }
 
-console.log(answer.join("\n"))
+console.log(answer.join("\n"));
