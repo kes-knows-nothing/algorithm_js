@@ -1,4 +1,4 @@
-const n = require("fs").readFileSync("/dev/stdin").toString().trim();;
+const n = require("fs").readFileSync("/dev/stdin").toString().trim();
 const list = n.split("").map((i) => Number(i));
 
 list.sort((a, b) => b - a);
