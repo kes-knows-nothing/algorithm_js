@@ -18,4 +18,3 @@ for (let i = 2; i <= num; i++) {
 }
 
 console.log(DP[num]);
-  
