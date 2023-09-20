@@ -16,5 +16,4 @@ for (let i = 2; i <= num; i++) {
       DP[i] = Math.min(DP[i], DP[i / 3] + 1);	
     }
 }
-
 console.log(DP[num]);
