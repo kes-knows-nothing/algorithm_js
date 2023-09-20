@@ -36,3 +36,5 @@ function upperBound(arr, target, start, end) {
   }
   return end;
 }
+
+// 파라메트릭 서치
