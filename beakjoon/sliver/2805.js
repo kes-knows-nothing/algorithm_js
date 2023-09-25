@@ -4,24 +4,23 @@ const input = require("fs")
   .replaceAll("\r", "")
   .split("\n");
 
-const trees = input[1].split(" ").map(Number).sort();
 const [n, k] = input[0].split(" ");
-let start = 1;
+const trees = input[1].split(" ").map(Number).sort();
+let start = 0;
 let end = trees[trees.length - 1];
 let result = 0;
 
 while (start <= end) {
-  let mid = parseInt((start + end) / 2);
+  let mid = Math.floor((start + end) / 2);
   let total = 0;
-  for (let tree of trees) {
-    if (tree > mid) {
-      total += tree - mid;
-    }
-  }
-  if (total <= k) {
-    result = mid;
+  trees.forEach((element) => {
+    let rest = element - mid;
+    if (rest > 0) total += rest;
+  });
+  if (total < k) {
     end = mid - 1;
-  } else if (total > k) {
+  } else if (total >= k) {
+    result = mid;
     start = mid + 1;
   }
 }
