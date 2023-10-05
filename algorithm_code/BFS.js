@@ -3,6 +3,7 @@
 class Queue {
   constructor() {
     this.item = {};
+    this.items = {};
     this.headIndex = 0;
     this.tailIndex = 0;
   }
@@ -18,6 +19,7 @@ class Queue {
   }
   peek() {
     return this.items[this.headIndex];
+
   }
   getLength() {
     return this.tailIndex - this.headIndex;
