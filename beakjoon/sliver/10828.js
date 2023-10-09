@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { userInfo } = require("os");
 const input = fs
   .readFileSync("/dev/stdin")
   .toString()
