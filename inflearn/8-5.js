@@ -5,6 +5,7 @@ arr.unshift(0);
 const sum = arr.reduce((a, b) => a + b, 0);
 let check = new Array(n + 1).fill(0);
 let answer = "NO";
+
 const DFS = (num) => {
   if (num == n + 1) {
     let matched = [];
